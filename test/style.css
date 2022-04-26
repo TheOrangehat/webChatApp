@@ -1,0 +1,51 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    
+    transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s;
+}
+
+body{
+    background-color: darkgray;
+}
+
+.cont{
+    height: 50px;
+    width: 60px;
+/* background-color: darkcyan; */
+text-align: center;
+margin: 200px;
+}
+
+.back{
+    height: 50px;
+    width: 50px;
+    background-color: rgba(158, 49, 247, 0.219);
+    border-radius: 0px 60px 10px 0px ;
+}
+
+.top{
+    height: 50px;
+    width: 50px;
+    background-color: rgba(19, 132, 224, 0.226);
+    border-radius: 0px 10px 50px 0px ;
+    position: relative;
+    top: -50px;
+}
+
+
+/* .back:hover{
+    border-radius: 0px 10px 50px 0px ;
+
+}
+.top:hover{
+    border-radius: 0px 60px 10px 0px ;
+
+
+} */
+
+.con{
+    position: relative;
+    top: -100px;
+    padding: 10px
+}

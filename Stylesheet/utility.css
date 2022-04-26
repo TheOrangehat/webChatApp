@@ -1,0 +1,43 @@
+.pad-tb-13{
+    padding: 13px 0px;
+}
+
+.flex{
+    display: flex ;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.content-between{
+    justify-content: space-between;
+}
+.Bold{
+    font-weight: bold;
+}
+
+.overflowhide{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.Cpointer{
+    cursor: pointer;
+}
+
+.size-30{
+    
+    font-size: 30px !important;
+}
+
+
+.size-36{
+    
+    font-size: 36px !important;
+}
+
