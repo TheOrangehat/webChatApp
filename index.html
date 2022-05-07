@@ -8,13 +8,14 @@
     <title>Chat app</title>
     <link rel="stylesheet" href="Stylesheet/style.css">
     <link rel="stylesheet" href="Stylesheet/utility.css">
+    <link rel="stylesheet" href="Stylesheet/drop-menu.css">
     <!--  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <!--  -->
 </head>
 <!-- make sure you have read utility classes -->
 
-<body>
+<body onload="basicFeature()">
     <div class="MainBody flex overflowhide">
         <div class="leftBox ">
             <div class="profileBox flex align-center content-between Cpointer">
@@ -26,61 +27,93 @@
                     account_circle
                 </span> -->
             </div>
-            <div class="menuBox flex align-center">
-                <span class="material-icons-outlined size-30">
-                    chat
-                </span>
-                <span class="text">Chats</span>
-            </div>
-            <div class="menuBox flex align-center">
-                <span class="material-icons-outlined size-30">
-                    groups
-                </span>
-                <span class="text">Groups</span>
-            </div>
-            <div class="menuBox flex align-center">
-                <span class="material-icons-outlined">
-                    trip_origin
-                </span>
-                <span class="text">Feels</span>
-            </div>
-            <div class="menuBox flex align-center">
-                <span class="material-icons-outlined size-30">
-                    account_circle
-                </span>
-                <span class="text">Peoples</span>
+            <hr>
+            <div class="menuBoxP">
+                <div class="menuBox flex align-center">
+                    <span class="material-icons-outlined size-30">
+                        chat
+                    </span>
+                    <span class="text">Chats</span>
+                </div>
+                <div class="menuBox flex align-center">
+                    <span class="material-icons-outlined size-30">
+                        groups
+                    </span>
+                    <span class="text">Groups</span>
+                </div>
+                <div class="menuBox flex align-center">
+                    <span class="material-icons-outlined">
+                        trip_origin
+                    </span>
+                    <span class="text">Feels</span>
+                </div>
+                <div class="menuBox flex align-center">
+                    <span class="material-icons-outlined size-30">
+                        account_circle
+                    </span>
+                    <span class="text">Peoples</span>
+                </div>
             </div>
 
         </div>
         <div class="midBox">
-            <div class="midMenuBox flex align-center content-between">
-                <span class="flex align-center">
-                    <span>
-                        <img class="profileImg spro" src="/images/girl in sunflower.jpg" alt="">
+            <div class="midMenuBoxP">
+                <div class="midMenuBox flex align-center content-between">
+                    <span class="flex align-center">
+                        <span>
+                            <img class="profileImg smallprofile" src="/images/girl in sunflower.jpg" alt="">
+                        </span>
+                        <div class="peoInfo">
+                            <span class="name Bold">Sunflower girl</span>
+                            <span class="lastMsg">so when you.....</span>
+                        </div>
                     </span>
-                    <div class="peoInfo">
-                        <span class="name Bold">Sunflower girl</span>
-                        <span class="lastMsg">so when you.....</span>
-                    </div>
-                </span>
-                <span class="lasttime">Tue</span>
+                    <span class="lasttime">Tue</span>
+                </div>
+                <div class="midMenuBox flex align-center content-between">
+                    <span class="flex align-center">
+                        <span>
+                            <img class="profileImg smallprofile" src="/images/girl in sunflower.jpg" alt="">
+                        </span>
+                        <div class="peoInfo">
+                            <span class="name Bold">Sunflower girl</span>
+                            <span class="lastMsg">so when you.....</span>
+                        </div>
+                    </span>
+                    <span class="lasttime">Tue</span>
+                </div>
             </div>
-            <div class="midMenuBox flex align-center content-between">
-                <span class="flex align-center">
-                    <span>
-                        <img class="profileImg spro" src="/images/girl in sunflower.jpg" alt="">
+
+            <div class="midMenuBoxP">
+                <div class="midMenuBox flex align-center content-between">
+                    <span class="flex align-center">
+                        <span>
+                            <img class="profileImg smallprofile" src="/images/girl in sunflower.jpg" alt="">
+                        </span>
+                        <div class="peoInfo">
+                            <span class="name Bold">Sunflower girl</span>
+                            <span class="lastMsg">so when you.....</span>
+                        </div>
                     </span>
-                    <div class="peoInfo">
-                        <span class="name Bold">Sunflower girl</span>
-                        <span class="lastMsg">so when you.....</span>
-                    </div>
-                </span>
-                <span class="lasttime">Tue</span>
+                    <span class="lasttime">Tue</span>
+                </div>
+                <div class="midMenuBox flex align-center content-between">
+                    <span class="flex align-center">
+                        <span>
+                            <img class="profileImg smallprofile" src="/images/girl in sunflower.jpg" alt="">
+                        </span>
+                        <div class="peoInfo">
+                            <span class="name Bold">Sunflower girl</span>
+                            <span class="lastMsg">so when you.....</span>
+                        </div>
+                    </span>
+                    <span class="lasttime">Tue</span>
+                </div>
             </div>
 
         </div>
         <div class="rightBox">
-            <div class="chatPerson flex content-between align-center">
+            <div class="chatPerson  flex content-between align-center">
                 <div class="personInfo flex content-between align-center">
                     <img src="/images/Millie-Bobby-Brown.webp" alt="">
                     <div class="persontext flex ">
@@ -90,10 +123,28 @@
 
                 </div>
                 <div class="personOptions">
-                    <div class="threedots">
-                        <span class="material-icons-outlined">
-                            more_vert
-                        </span>
+                    <span class="menuToggle g" onclick="toogleclicked()"></span>
+                    <div class="overlay" onclick="toogleclicked()"></div>
+                    <div class="perOptionsList">
+                        <div class="option">
+                            <span class="material-icons-outlined size-30">
+                                search
+                            </span>
+                            <span>Search</span>
+                            
+                        </div>
+                        <div class="option">
+                            <span class="material-icons-outlined size-30">
+                                speaker_notes_off
+                                </span>
+                            <span>Mute</span>
+                        </div>
+                        <div class="option">
+                            <span class="material-icons-outlined size-30">
+                                delete
+                                </span>
+                            <span>Delete Chat</span>
+                        </div>
                     </div>
                 </div>
 
@@ -101,26 +152,122 @@
 
 
             </div>
-            <div class="chatList">
+            <div class="chatList flex flex-column scrollbar-hide">
                 <div class="chatBox">
-                    <p>Hi,<br>How you are you?</p>
+                    <div class="bubbel  comeBubbel">
+                        <p>Hi,<br>How you are you?</p>
+                    </div>
                 </div>
                 <div class="chatBox">
-                    <p>Is you ignoring me &#128544</p>
+                    <div class="bubbel comeBubbel">
+
+                        <p>Is you ignoring me &#128544</p>
+                    </div>
+                </div>
+                <div class="chatBox ">
+                    <div class="bubbel goBubbel">
+
+                        <p>No, i was busy &#128528</p>
+                    </div>
                 </div>
                 <div class="chatBox">
-                    <p>No, i was busy &#128528</p>
+                    <div class="bubbel  comeBubbel">
+                        <p>Hi,<br>How you are you?</p>
+                    </div>
+                </div>
+                <div class="chatBox">
+                    <div class="bubbel comeBubbel">
+
+                        <p>Is you ignoring me &#128544</p>
+                    </div>
+                </div>
+                <div class="chatBox ">
+                    <div class="bubbel goBubbel">
+
+                        <p>No, i was busy &#128528</p>
+                    </div>
+                </div>
+                <div class="chatBox">
+                    <div class="bubbel  comeBubbel">
+                        <p>Hi,<br>How you are you?</p>
+                    </div>
+                </div>
+                <div class="chatBox">
+                    <div class="bubbel comeBubbel">
+
+                        <p>Is you ignoring me &#128544</p>
+                    </div>
+                </div>
+                <div class="chatBox ">
+                    <div class="bubbel goBubbel">
+
+                        <p>No, i was busy &#128528</p>
+                    </div>
+                </div>
+                <div class="chatBox">
+                    <div class="bubbel  comeBubbel">
+                        <p>Hi,<br>How you are you?</p>
+                    </div>
+                </div>
+                <div class="chatBox">
+                    <div class="bubbel comeBubbel">
+
+                        <p>Is you ignoring me &#128544</p>
+                    </div>
+                </div>
+                <div class="chatBox ">
+                    <div class="bubbel goBubbel">
+
+                        <p>No, i was busy &#128528</p>
+                    </div>
+                </div>
+                <div class="chatBox">
+                    <div class="bubbel  comeBubbel">
+                        <p>Hi,<br>How you are you?</p>
+                    </div>
+                </div>
+                <div class="chatBox">
+                    <div class="bubbel comeBubbel">
+
+                        <p>Is you ignoring me &#128544</p>
+                    </div>
+                </div>
+                <div class="chatBox ">
+                    <div class="bubbel goBubbel">
+
+                        <p>No, i was busy &#128528</p>
+                    </div>
+                </div>
+                <div class="chatBox">
+                    <div class="bubbel  comeBubbel">
+                        <p>Hi,<br>How you are you?</p>
+                    </div>
+                </div>
+                <div class="chatBox">
+                    <div class="bubbel comeBubbel">
+
+                        <p>Is you ignoring me &#128544</p>
+                    </div>
+                </div>
+                <div class="chatBox ">
+                    <div class="bubbel goBubbel">
+
+                        <p>No, i was busy &#128528</p>
+                    </div>
                 </div>
 
             </div>
             <div class="typingSection flex align-center content-between">
                 <div id="attachbox" class="attachFile Cpointer">
                     <div id="attachback" class="attachFileback"></div>
-                    <div id="attachfront"  class="attachFilefront">
+                    <div id="attachfront" class="attachFilefront">
 
                         <span class="material-icons-outlined pad-tb-13">
                             attach_file
                         </span>
+                    </div>
+                    <div class="attachFilemenu">
+                        
                     </div>
 
 

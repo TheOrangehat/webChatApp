@@ -10,6 +10,10 @@
     justify-content: flex-start;
 }
 
+.flex-column{
+    flex-direction: column;
+}
+
 .align-center{
     align-items: center;
 }
@@ -30,6 +34,10 @@
     cursor: pointer;
 }
 
+.scrollbar-hide::-webkit-scrollbar{
+    display: none;
+}
+
 .size-30{
     
     font-size: 30px !important;
@@ -40,4 +48,5 @@
     
     font-size: 36px !important;
 }
+
 
