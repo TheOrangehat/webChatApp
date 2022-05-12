@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat app</title>
+    <title>Patra</title>
     <link rel="stylesheet" href="Stylesheet/style.css">
     <link rel="stylesheet" href="Stylesheet/utility.css">
     <link rel="stylesheet" href="Stylesheet/drop-menu.css">
+    <link rel="stylesheet" href="Stylesheet/Panales.css">
     <!--  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
     <!--  -->
 </head>
 <!-- make sure you have read utility classes -->
@@ -123,34 +125,30 @@
 
                 </div>
                 <div class="personOptions">
-                    <span class="menuToggle g" onclick="toogleclicked()"></span>
-                    <div class="overlay" onclick="toogleclicked()"></div>
+                    <span class="menuToggle g" id="menuBox" onclick="toogleclicked(this.id)"></span>
+                    <div class="overlay" id="overlay" onclick="toogleclicked(this.id)"></div>
                     <div class="perOptionsList">
                         <div class="option">
                             <span class="material-icons-outlined size-30">
                                 search
                             </span>
                             <span>Search</span>
-                            
+
                         </div>
                         <div class="option">
                             <span class="material-icons-outlined size-30">
                                 speaker_notes_off
-                                </span>
+                            </span>
                             <span>Mute</span>
                         </div>
                         <div class="option">
                             <span class="material-icons-outlined size-30">
                                 delete
-                                </span>
+                            </span>
                             <span>Delete Chat</span>
                         </div>
                     </div>
                 </div>
-
-
-
-
             </div>
             <div class="chatList flex flex-column scrollbar-hide">
                 <div class="chatBox">
@@ -165,6 +163,7 @@
                     </div>
                 </div>
                 <div class="chatBox ">
+                    <img id="hhh" src="#" alt="">
                     <div class="bubbel goBubbel">
 
                         <p>No, i was busy &#128528</p>
@@ -260,14 +259,46 @@
             <div class="typingSection flex align-center content-between">
                 <div id="attachbox" class="attachFile Cpointer">
                     <div id="attachback" class="attachFileback"></div>
-                    <div id="attachfront" class="attachFilefront">
+                    <div id="attachfront" class="attachFilefront" onclick="toogleclicked(this.id)">
 
                         <span class="material-icons-outlined pad-tb-13">
                             attach_file
                         </span>
+                        <input onchange="showPreview(event)" id="fileUploader" type="file" /hidden>
+
+
                     </div>
-                    <div class="attachFilemenu">
-                        
+                    <div class="attachFilemenu flex align-center">
+                        <div class="attachFileoption">
+                            <span class="material-icons-outlined size-36" id="imgsend"
+                                onclick="uploadBoxOpner(this.id)">
+                                image
+                            </span>
+                        </div>
+                        <div class="attachFileoption">
+                            <span class="material-icons-outlined size-36 " id="videosend"
+                                onclick="uploadBoxOpner(this.id)">
+                                videocam
+                            </span>
+                        </div>
+                        <div class="attachFileoption">
+                            <span class="material-icons-outlined size-36" id="filesend"
+                                onclick="uploadBoxOpner(this.id)">
+                                description
+                            </span>
+                        </div>
+                        <div class="attachFileoption">
+                            <span class="material-icons-outlined size-36" id="audiosend"
+                                onclick="uploadBoxOpner(this.id)">
+                                music_note
+                            </span>
+                        </div>
+                        <div class="attachFileoption">
+                            <span class="material-icons-outlined size-36">
+                                sentiment_satisfied
+                            </span>
+                        </div>
+
                     </div>
 
 
@@ -291,11 +322,31 @@
             </div>
         </div>
     </div>
+    <!-- <div class="filePreviwePanale flex ">
+        
+        <div class="filePreviwe">
+            <div class="previweBox">
+
+            </div>
+            <div class="fileInfo">
+                <span><bold>File name</bold></span><br>
+                <span>151 Kb</span>
+            </div>
+        </div>
+        <div class="selectedFiles">
+            <div class="file">
+                <img src="" alt="">
+            </div>
+        </div>
+
+
+    </div> -->
 
 
 
 
     <script src="/javascript/transitionandeffects.js"></script>
+    <script src="/javascript/basics.js"></script>
 </body>
 
 </html>

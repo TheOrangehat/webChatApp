@@ -7,6 +7,7 @@ let menuBox  = document.getElementsByClassName("personOptions")[0];
 let overlay = document.getElementsByClassName("overlay")[0];
 let chatList = document.getElementsByClassName("chatList")[0];
 
+let attachMenu = document.getElementsByClassName("attachFilemenu")[0];
 
 // normal fe
 function basicFeature() {
@@ -33,11 +34,26 @@ Attachbox.addEventListener("mouseenter", ()=>{
 
 
 // drop menu 
-function toogleclicked() {
-    // menuBox.style.display = "flex";
-    // menuBox.style.right = "2rem";
-    // menuBox.style.top = "5rem";
-    menuBox.classList.toggle("open");
-    overlay.classList.toggle("active");
+function toogleclicked(id) {
+    if (id == "menuBox" ){
+        menuBox.classList.toggle("open");  
+        overlay.classList.toggle("active");  
 
+    }
+    
+   
+    // insert menu id
+    else if (id == "attachfront"){
+        attachMenu.classList.toggle("open");
+        overlay.classList.toggle("active");  
+
+    }
+
+    else if (id == "overlay"){
+        overlay.classList.toggle("active");  
+        menuBox.classList.remove("open");
+        attachMenu.classList.remove("open");
+
+    }
+ 
 }

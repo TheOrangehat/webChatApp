@@ -11,6 +11,12 @@
   --back-pink: #ff00ea;
   --back-pink-light: #ff00ea54;
   font-family: var(--Roboto);
+ 
+}
+
+body{
+  overflow-x: hidden;
+  overflow-y:hidden;
 }
 
 .MainBody {
@@ -200,7 +206,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   width: -webkit-fill-available;
-  height: 81.5vh;
+  height: calc(100% - 120px);
   margin: 0px;
   padding: 1px;
   overflow-y: scroll;
@@ -235,6 +241,8 @@
   float: left;
 }
 
+/* typing section */
+
 .typingSection {
   height: 50px;
   width: -webkit-fill-available;
@@ -245,8 +253,7 @@
     rgba(18, 226, 168, 1) 53%,
     rgba(59, 186, 170, 1) 100%
   );
-  /* position: relative; */
-  bottom: 0px;
+
 }
 
 .attachFile {
@@ -273,6 +280,52 @@
   position: relative;
   top: -50px;
 }
+
+.attachFilemenu{
+  /* background-color: #ff00ea31;*/
+  background: linear-gradient(
+    17deg,
+    rgb(25, 201, 177) 0%,
+    rgb(45, 255, 210) 53%,
+    rgba(175, 120, 197, 1) 100%
+  ); 
+
+  position: absolute;
+  bottom: 60px;
+  margin: 5px 30px;
+  height: 60px;
+  width: auto;
+  border: solid 2px #fff;
+  border-radius: 16px;
+  box-shadow: 3px 4px 20px 2px rgba(0, 0, 0, 0.356);
+  cursor: default;
+}
+
+.attachFilemenu .attachFileoption{
+  height: 50px;
+  width :50px;
+  border: solid 1px #fff;
+  border-radius: 20px;
+  background-color: rgba(0, 204, 255, 0.164);
+  backdrop-filter: blur(1px);
+  
+  margin: 10px;
+  /* padding: 2px; */
+  transition: all 0.2s;
+}
+
+.attachFilemenu .attachFileoption:hover{
+  cursor: pointer;
+  box-shadow: 3px 4px 20px 2px rgba(0, 0, 0, 0.356);
+  margin-bottom: 20px;
+}
+.attachFilemenu .attachFileoption span{
+  text-align: center;
+  margin: 6px;
+  color: white !important;
+}
+
+
 
 /* 
 .attachFile span{
