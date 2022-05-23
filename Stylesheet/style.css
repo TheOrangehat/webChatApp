@@ -109,7 +109,10 @@ body{
   margin-left: 10px;
 }
 
+/* ------- */
 /* Mid box started */
+
+
 .midBox::-webkit-scrollbar {
   width: 5px;
   background-color: var(--elem-back);
@@ -118,6 +121,57 @@ body{
   border-radius: 20px;
   background-color: rgb(213, 255, 255);
 }
+
+.midBoxSearchBar{
+height: 50px;
+width: 90%;
+background-color: var(--elem-white-color);
+border-bottom: var(--elem-back) solid 2px;
+  border-radius: 20px;
+  margin: 10px auto 4px auto;
+  padding: 5px;
+  transition: ease-in 0.1s;
+}
+
+.midBoxSearchBar{
+  box-shadow: 1px 2px 20px 7px #ffffff;
+}
+
+.midBoxSearchBar input{
+  margin: auto;
+  height: 45px;
+  width: 80%;
+  border: none;
+  background-color: var(--elem-back);
+  font-size: 1rem;
+  border-radius: 20px;
+  padding: 0px 10px;
+  transition: all 0.4s;
+  
+}
+
+.midBoxSearchBar input:focus-visible{
+  outline: 1px solid;
+background-color: var(--elem-white-color);
+
+
+}
+
+.midBoxSearchBar .searchButtonBox{
+  font-size: 32px;
+  height: 45px;
+  width: 20%;
+  margin: auto;
+}
+
+
+.midBoxSearchBar ion-icon{
+  margin: 7px 4px;
+  cursor: pointer;
+
+}
+
+
 
 .midMenuBoxP {
   height: auto;
@@ -166,6 +220,15 @@ body{
 }
 
 /* Right box started */
+.chats,.feels{
+  height: 100%;
+}
+/* ----------------------------- */
+/* Chats start */
+
+.chats{
+  display: none;
+}
 .chatPerson {
   background-color: var(--elem-back);
   height: 70px;
@@ -325,13 +388,6 @@ body{
   color: white !important;
 }
 
-
-
-/* 
-.attachFile span{
-    margin-top: auto;
-} */
-
 .msgTyping {
   height: auto;
   width: auto;
@@ -351,6 +407,248 @@ body{
 }
 
 
+/* chats end */
+
+/* ---------- */
+/* Flees start  */
+
+.feels{
+  overflow-x: hidden;
+  /* overflow-y: scroll; */
+  overflow-y: hidden;
+  display: none;
+}
+
+.feels::-webkit-scrollbar {
+  width: 10px;
+  background-color: var(--elem-back);
+}
+.feels::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: rgb(0, 255, 213);
+}
+
+.myfeels{
+  height: 70px;
+  width: 100%;
+  border-bottom: 1px solid #000;
+  background-color: rgb(255, 255, 255);
+ padding: 10px;
+ margin-top: 5px;
+ margin-bottom: 10px;
+}
+
+.myfeels .profileFeels{
+  height: 70px ;
+  width: 70px;
+  border-radius: 999px;
+  background: #a47cff;
+  padding: 1px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.myfeels .profileImage {
+  height: 65px;
+  width: 65px;
+  border-radius: 999px;
+  background: #fff;
+  margin: 2.3px;
+  background: url("/images/girlred.jpg");
+  background-size: cover;
+  
+}
+
+.feelsName{
+  height: auto;
+  /* margin: auto; */
+  margin-left: 15px;
+}
+
+
+.feelsName .profileName{
+  margin: 3px 0px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #000;
+}
+.feelsName .feelsInfo{
+  font-weight: lighter;
+  font-size: 0.8rem;
+  color: #000;
+}
+
+/* ---------------- */
+
+.feelsBox{
+  height: 70px;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  margin: 5px auto;
+  transition: all 0.3s;
+  overflow-y: auto;
+}
+
+.feelsBox:hover{
+  cursor: pointer;
+  background-color: rgb(245, 245, 245);
+  border-radius: 30px;
+}
+
+.feelsBox .profile{
+  height: 65px;
+  width: 65px;
+  border-radius: 999px;
+  background: #fff;
+  margin: 2.3px;
+  background: url("/images/girlred.jpg");
+  background-size: cover;
+}
+
+.feelsBox .profile img{
+  height: 65px;
+  width: 65px;
+  border-radius: 999px;
+  object-fit: cover;
+}
+
+/*  */
+.feelPanale{
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  display: none;
+  transition: all 0.3s ease-in;
+  
+}
+
+.feelNav{
+  /* margin-top: 0px; */
+  height: 60px;
+  background: linear-gradient(137deg, rgb(65 193 158) 0%, rgb(41 235 182) 53%, rgb(37 177 146) 100%);
+
+  padding: 5px;
+  padding-right: 10px;
+  color: #fff;
+}
+
+.feelBody{
+  height: calc(100%-60px);
+  /* background-color: #55cfbdab; */
+  padding: auto;
+}
+
+.feelBody video{
+  margin:  auto;
+  height: calc(100vh - 70px);
+  width: 100%;
+}
+
+.feelBody .feelProgress{
+  position: absolute;
+  height: 2px;
+  width: 60%;
+  background-color: rgba(255, 255, 255, 0.301);
+}
+
+.feelBody .progressBar{
+  height: 2px;
+  width: 0%;
+  background-color: rgb(255, 255, 255);
+  transition: all 0.1ms;
+}
+
+.feelBody .feelChangeButtons{
+  height: fit-content;
+  width: 60vw;
+  position: absolute;
+  top: 45%;
+}
+
+.feelBody .back_Feel, .fore_Feel{
+  /* position: relative; */
+  /* background: #aa8eec83; */
+  color: #fff;
+  height: 40px;
+  width: 40px;
+  font-size: 40px;
+  margin: auto 5px;
+  z-index: 4;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.feelBody .back_Feel:active, .fore_Feel:active{
+font-size: 36px;
+
+}
+
+
+
+
+/* .feelBody .fore_Feel{
+  right: 10px;
+}
+
+.feelBody .back_Feel{
+  left: 10px;
+
+} */
+
+
+.feelReply{
+  position: absolute;
+  bottom: 0%;
+  height: 50px;
+  background-color: #00000049;
+  width: 60%;
+  /* padding: 0px 10px; */
+}
+
+.feelReply input{
+  font-size: 1rem;
+  height: 30px;
+  width: 80%;
+  margin: auto;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.123);
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(255, 255, 255);
+  padding: 1px 6px;
+  transition: ease-in 0.2s;
+}
+
+.feelReply input:focus-visible {
+  outline: none !important;
+  background-color: #fff;
+}
+
+.feelReply .feelReplyBtn{
+  margin: auto;
+  width: 40px;
+  cursor: pointer;
+  color: #fff;
+  
+}
+
+.feelReply .feelReplyBtn:active{
+  color: #a47cff;
+
+}
+/* ----------------------------------------- */
+
+
+
+/* Groups */
+.groups{
+  display: none;
+}
+/* ---------------------------- */
+
+
+
+
 /* animations */
 
 /**
@@ -358,6 +656,8 @@ body{
 * animation chat-person-background
 * ----------------------------------------
 */
+
+
 @-webkit-keyframes chat-person-background{
   0% {
     background-position: 100% 50%;

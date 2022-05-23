@@ -6,9 +6,11 @@ let Attachfront = document.getElementById("attachfront");
 let menuBox  = document.getElementsByClassName("personOptions")[0];
 let overlay = document.getElementsByClassName("overlay")[0];
 let chatList = document.getElementsByClassName("chatList")[0];
-
 let attachMenu = document.getElementsByClassName("attachFilemenu")[0];
-
+let FeelNavbar = document.getElementsByClassName("feelNav")[0];
+let Feelsmenu = document.getElementsByClassName("Feelsmenu")[0];
+let mmidsearchInput = document.getElementById("searchInput");
+let midSearchBox = document.getElementsByClassName("midBoxSearchBar")[0];
 // normal fe
 function basicFeature() {
     scrollBottom();
@@ -20,6 +22,8 @@ function scrollBottom() {
     chatList.scrollTo(0, xH);
     
 }
+
+
 
 // insert button effect
 Attachbox.addEventListener("mouseenter", ()=>{
@@ -49,11 +53,25 @@ function toogleclicked(id) {
 
     }
 
+     // feels menu box
+     else if (id=="feelsMenubtn"){
+        FeelNavbar.classList.toggle("open");
+        Feelsmenu.classList.toggle("open");
+        overlay.classList.toggle("active");  
+
+    }
+
     else if (id == "overlay"){
         overlay.classList.toggle("active");  
         menuBox.classList.remove("open");
         attachMenu.classList.remove("open");
+        // 
+        FeelNavbar.classList.remove("open");
+        Feelsmenu.classList.remove("open");
+        // 
 
     }
+
+   
  
 }

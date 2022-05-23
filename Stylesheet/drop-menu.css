@@ -1,10 +1,4 @@
-.personOptions{
-    /* position: fi; */
-    display: flex;
-
-}
-
-.personOptions .overlay{
+.overlay{
   position: fixed;
   left: 0px;
   top: 0px;
@@ -14,9 +8,17 @@
   visibility: hidden;
 }
 
-.personOptions .overlay.active{
+.overlay.active{
   visibility: visible;
 }
+
+
+.personOptions{
+    /* position: fi; */
+    display: flex;
+
+}
+
 
 .personOptions .menuToggle {
   height: 30px;
@@ -96,7 +98,6 @@
   height: 40px ;
   width: -webkit-fill-available;
   border-bottom: solid 1px #000;
-
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -129,3 +130,103 @@
   transform: scale(1) !important;
   opacity: 1;
 }
+
+/* Feels menu */
+
+.feelNav .sideMenuFeelsBtn{
+  height: 20px;
+  width: 25px;
+cursor: pointer;
+
+}
+
+.feelNav .sideMenuFeelsBtn::after{
+  position: absolute;
+  transform: translateY(8px);
+  transition: all cubic-bezier(0.165, 0.84, 0.44, 1) 0.4s;
+
+  content: ' ';
+  height: 2px;
+  width: 25px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 8px 0px 0px rgba(255, 255, 255, 0.79);
+  -moz-box-shadow: 0px 8px 0px 0px rgba(255, 255, 255, 0.79);
+  box-shadow: 0px 8px 0px 0px rgba(255, 255, 255, 0.79);
+}
+
+.feelNav.open .sideMenuFeelsBtn::after{
+  transform: translateY(8px) rotate(-45deg);
+
+  box-shadow: none;
+}
+
+.feelNav .sideMenuFeelsBtn::before{
+  transition: all cubic-bezier(0.165, 0.84, 0.44, 1) 0.4s;
+
+  position: absolute;
+  content: ' ';
+  height: 2px;
+  width: 25px;
+  background-color: #fff;
+}
+
+.feelNav.open .sideMenuFeelsBtn::before{
+  transform: translateY(8px) rotate(45deg);
+
+  box-shadow: none;
+}
+
+.Feelsmenu{
+  position: fixed;
+  height: fit-content;
+  width: 250px;
+  padding: 5px 0px;
+  right: -2rem;
+  top: 3rem;
+  background-color: #fff;
+  border-radius: 20px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  visibility: hidden;
+  transform: scale(0.7) !important;
+  opacity: 0;
+  z-index: 5;
+  
+}
+
+.Feelsmenu.open{
+  visibility: visible;
+  transform: scale(1) !important;
+  opacity: 1;
+  right: 1rem;
+  top: 5rem;
+}
+
+.Feelsmenu .option{
+  height: 40px ;
+  width: -webkit-fill-available;
+  border-bottom: solid 1px #000;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 0px 4px;
+  font-size: 1rem;
+  transition: all 0.1s;
+
+}
+.Feelsmenu .option:last-child{
+border-bottom: none;
+
+}
+
+.Feelsmenu .option ion-icon{
+  font-size: 1.5rem;
+  margin-right: 5px;
+}
+
+.Feelsmenu .option:active{
+ font-size: 0.8rem;
+}
+
+
+ 

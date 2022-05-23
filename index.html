@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="Stylesheet/Panales.css">
     <!--  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
     <!--  -->
 </head>
@@ -22,7 +23,7 @@
         <div class="leftBox ">
             <div class="profileBox flex align-center content-between Cpointer">
                 <span class="flex align-center ">
-                    <img class="profileImg" src="/images/girlred.jpg" alt="">
+                    <img class="profileImg" src="/images/Profile/girlred.jpg" alt="">
                     <p class="Bold">user </p>
                 </span>
                 <!-- <span class="material-icons-outlined size-36">
@@ -31,19 +32,19 @@
             </div>
             <hr>
             <div class="menuBoxP">
-                <div class="menuBox flex align-center">
+                <div class="menuBox flex align-center" id="chatButton" onclick="changePanale(this.id)">
                     <span class="material-icons-outlined size-30">
                         chat
                     </span>
                     <span class="text">Chats</span>
                 </div>
-                <div class="menuBox flex align-center">
+                <div class="menuBox flex align-center" id="groupsButton" onclick="changePanale(this.id)">
                     <span class="material-icons-outlined size-30">
                         groups
                     </span>
                     <span class="text">Groups</span>
                 </div>
-                <div class="menuBox flex align-center">
+                <div class="menuBox flex align-center" id="feelsButton" onclick="changePanale(this.id)">
                     <span class="material-icons-outlined">
                         trip_origin
                     </span>
@@ -59,11 +60,20 @@
 
         </div>
         <div class="midBox">
+            <div class="midBoxSearchBar flex content-between align-center" >
+                
+                    <input id="searchInput" type="text" placeholder="Search in Chats...">
+                
+                <div class="searchButtonBox">
+                    <ion-icon name="search-outline"></ion-icon>
+                </div>
+            </div>
+
             <div class="midMenuBoxP">
                 <div class="midMenuBox flex align-center content-between">
                     <span class="flex align-center">
                         <span>
-                            <img class="profileImg smallprofile" src="/images/girl in sunflower.jpg" alt="">
+                            <img class="profileImg smallprofile" src="/images/Profile/girl in sunflower.jpg" alt="">
                         </span>
                         <div class="peoInfo">
                             <span class="name Bold">Sunflower girl</span>
@@ -75,7 +85,7 @@
                 <div class="midMenuBox flex align-center content-between">
                     <span class="flex align-center">
                         <span>
-                            <img class="profileImg smallprofile" src="/images/girl in sunflower.jpg" alt="">
+                            <img class="profileImg smallprofile" src="/images/Profile/girl in sunflower.jpg" alt="">
                         </span>
                         <div class="peoInfo">
                             <span class="name Bold">Sunflower girl</span>
@@ -90,7 +100,7 @@
                 <div class="midMenuBox flex align-center content-between">
                     <span class="flex align-center">
                         <span>
-                            <img class="profileImg smallprofile" src="/images/girl in sunflower.jpg" alt="">
+                            <img class="profileImg smallprofile" src="/images/Profile/girl in sunflower.jpg" alt="">
                         </span>
                         <div class="peoInfo">
                             <span class="name Bold">Sunflower girl</span>
@@ -102,7 +112,7 @@
                 <div class="midMenuBox flex align-center content-between">
                     <span class="flex align-center">
                         <span>
-                            <img class="profileImg smallprofile" src="/images/girl in sunflower.jpg" alt="">
+                            <img class="profileImg smallprofile" src="/images/Profile/girl in sunflower.jpg" alt="">
                         </span>
                         <div class="peoInfo">
                             <span class="name Bold">Sunflower girl</span>
@@ -115,222 +125,332 @@
 
         </div>
         <div class="rightBox">
-            <div class="chatPerson  flex content-between align-center">
-                <div class="personInfo flex content-between align-center">
-                    <img src="/images/Millie-Bobby-Brown.webp" alt="">
-                    <div class="persontext flex ">
-                        <span class="Bold"> User3</span>
-                        <span>last seen DOn't know;</span>
+            <div class="chats">
+                <div class="chatPerson  flex content-between align-center">
+                    <div class="personInfo flex content-between align-center">
+                        <img src="/images/Profile/Millie-Bobby-Brown.webp" alt="">
+                        <div class="persontext flex ">
+                            <span class="Bold"> User3</span>
+                            <span>last seen DOn't know;</span>
+                        </div>
+
+                    </div>
+                    <div class="personOptions">
+                        <span class="menuToggle g" id="menuBox" onclick="toogleclicked(this.id)"></span>
+                        <div class="perOptionsList">
+                            <div class="option">
+                                <span class="material-icons-outlined size-30">
+                                    search
+                                </span>
+                                <span>Search</span>
+
+                            </div>
+                            <div class="option">
+                                <span class="material-icons-outlined size-30">
+                                    speaker_notes_off
+                                </span>
+                                <span>Mute</span>
+                            </div>
+                            <div class="option">
+                                <span class="material-icons-outlined size-30">
+                                    delete
+                                </span>
+                                <span>Delete Chat</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chatList flex flex-column scrollbar-hide">
+                    <div class="chatBox">
+                        <div class="bubbel  comeBubbel">
+                            <p>Hi,<br>How you are you?</p>
+                        </div>
+                    </div>
+                    <div class="chatBox">
+                        <div class="bubbel comeBubbel">
+
+                            <p>Is you ignoring me &#128544</p>
+                        </div>
+                    </div>
+                    <div class="chatBox ">
+                        <img id="hhh" src="#" alt="">
+                        <div class="bubbel goBubbel">
+
+                            <p>No, i was busy &#128528</p>
+                        </div>
+                    </div>
+                    <div class="chatBox">
+                        <div class="bubbel  comeBubbel">
+                            <p>Hi,<br>How you are you?</p>
+                        </div>
+                    </div>
+                    <div class="chatBox">
+                        <div class="bubbel comeBubbel">
+
+                            <p>Is you ignoring me &#128544</p>
+                        </div>
+                    </div>
+                    <div class="chatBox ">
+                        <div class="bubbel goBubbel">
+
+                            <p>No, i was busy &#128528</p>
+                        </div>
+                    </div>
+                    <div class="chatBox">
+                        <div class="bubbel  comeBubbel">
+                            <p>Hi,<br>How you are you?</p>
+                        </div>
+                    </div>
+                    <div class="chatBox">
+                        <div class="bubbel comeBubbel">
+
+                            <p>Is you ignoring me &#128544</p>
+                        </div>
+                    </div>
+                    <div class="chatBox ">
+                        <div class="bubbel goBubbel">
+
+                            <p>No, i was busy &#128528</p>
+                        </div>
+                    </div>
+                    <div class="chatBox">
+                        <div class="bubbel  comeBubbel">
+                            <p>Hi,<br>How you are you?</p>
+                        </div>
+                    </div>
+                    <div class="chatBox">
+                        <div class="bubbel comeBubbel">
+
+                            <p>Is you ignoring me &#128544</p>
+                        </div>
+                    </div>
+                    <div class="chatBox ">
+                        <div class="bubbel goBubbel">
+
+                            <p>No, i was busy &#128528</p>
+                        </div>
+                    </div>
+                    <div class="chatBox">
+                        <div class="bubbel  comeBubbel">
+                            <p>Hi,<br>How you are you?</p>
+                        </div>
+                    </div>
+                    <div class="chatBox">
+                        <div class="bubbel comeBubbel">
+
+                            <p>Is you ignoring me &#128544</p>
+                        </div>
+                    </div>
+                    <div class="chatBox ">
+                        <div class="bubbel goBubbel">
+
+                            <p>No, i was busy &#128528</p>
+                        </div>
+                    </div>
+                    <div class="chatBox">
+                        <div class="bubbel  comeBubbel">
+                            <p>Hi,<br>How you are you?</p>
+                        </div>
+                    </div>
+                    <div class="chatBox">
+                        <div class="bubbel comeBubbel">
+
+                            <p>Is you ignoring me &#128544</p>
+                        </div>
+                    </div>
+                    <div class="chatBox ">
+                        <div class="bubbel goBubbel">
+
+                            <p>No, i was busy &#128528</p>
+                        </div>
                     </div>
 
                 </div>
-                <div class="personOptions">
-                    <span class="menuToggle g" id="menuBox" onclick="toogleclicked(this.id)"></span>
-                    <div class="overlay" id="overlay" onclick="toogleclicked(this.id)"></div>
-                    <div class="perOptionsList">
-                        <div class="option">
-                            <span class="material-icons-outlined size-30">
-                                search
+                <div class="typingSection flex align-center content-between">
+                    <div id="attachbox" class="attachFile Cpointer">
+                        <div id="attachback" class="attachFileback"></div>
+                        <div id="attachfront" class="attachFilefront" onclick="toogleclicked(this.id)">
+
+                            <span class="material-icons-outlined pad-tb-13">
+                                attach_file
                             </span>
-                            <span>Search</span>
+                            <input onchange="showPreview(event)" id="fileUploader" type="file" /hidden>
+
 
                         </div>
-                        <div class="option">
-                            <span class="material-icons-outlined size-30">
-                                speaker_notes_off
-                            </span>
-                            <span>Mute</span>
+                        <div class="attachFilemenu flex align-center">
+                            <div class="attachFileoption">
+                                <span class="material-icons-outlined size-36" id="imgsend"
+                                    onclick="uploadBoxOpner(this.id)">
+                                    image
+                                </span>
+                            </div>
+                            <div class="attachFileoption">
+                                <span class="material-icons-outlined size-36 " id="videosend"
+                                    onclick="uploadBoxOpner(this.id)">
+                                    videocam
+                                </span>
+                            </div>
+                            <div class="attachFileoption">
+                                <span class="material-icons-outlined size-36" id="filesend"
+                                    onclick="uploadBoxOpner(this.id)">
+                                    description
+                                </span>
+                            </div>
+                            <div class="attachFileoption">
+                                <span class="material-icons-outlined size-36" id="audiosend"
+                                    onclick="uploadBoxOpner(this.id)">
+                                    music_note
+                                </span>
+                            </div>
+                            <div class="attachFileoption">
+                                <span class="material-icons-outlined size-36">
+                                    sentiment_satisfied
+                                </span>
+                            </div>
+
                         </div>
-                        <div class="option">
-                            <span class="material-icons-outlined size-30">
-                                delete
-                            </span>
-                            <span>Delete Chat</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="chatList flex flex-column scrollbar-hide">
-                <div class="chatBox">
-                    <div class="bubbel  comeBubbel">
-                        <p>Hi,<br>How you are you?</p>
-                    </div>
-                </div>
-                <div class="chatBox">
-                    <div class="bubbel comeBubbel">
 
-                        <p>Is you ignoring me &#128544</p>
-                    </div>
-                </div>
-                <div class="chatBox ">
-                    <img id="hhh" src="#" alt="">
-                    <div class="bubbel goBubbel">
 
-                        <p>No, i was busy &#128528</p>
                     </div>
-                </div>
-                <div class="chatBox">
-                    <div class="bubbel  comeBubbel">
-                        <p>Hi,<br>How you are you?</p>
-                    </div>
-                </div>
-                <div class="chatBox">
-                    <div class="bubbel comeBubbel">
 
-                        <p>Is you ignoring me &#128544</p>
+                    <div class="msgTyping">
+                        <input class="msgInput" placeholder="Type massage here..." type="text" name="" id="">
                     </div>
-                </div>
-                <div class="chatBox ">
-                    <div class="bubbel goBubbel">
-
-                        <p>No, i was busy &#128528</p>
-                    </div>
-                </div>
-                <div class="chatBox">
-                    <div class="bubbel  comeBubbel">
-                        <p>Hi,<br>How you are you?</p>
-                    </div>
-                </div>
-                <div class="chatBox">
-                    <div class="bubbel comeBubbel">
-
-                        <p>Is you ignoring me &#128544</p>
-                    </div>
-                </div>
-                <div class="chatBox ">
-                    <div class="bubbel goBubbel">
-
-                        <p>No, i was busy &#128528</p>
-                    </div>
-                </div>
-                <div class="chatBox">
-                    <div class="bubbel  comeBubbel">
-                        <p>Hi,<br>How you are you?</p>
-                    </div>
-                </div>
-                <div class="chatBox">
-                    <div class="bubbel comeBubbel">
-
-                        <p>Is you ignoring me &#128544</p>
-                    </div>
-                </div>
-                <div class="chatBox ">
-                    <div class="bubbel goBubbel">
-
-                        <p>No, i was busy &#128528</p>
-                    </div>
-                </div>
-                <div class="chatBox">
-                    <div class="bubbel  comeBubbel">
-                        <p>Hi,<br>How you are you?</p>
-                    </div>
-                </div>
-                <div class="chatBox">
-                    <div class="bubbel comeBubbel">
-
-                        <p>Is you ignoring me &#128544</p>
-                    </div>
-                </div>
-                <div class="chatBox ">
-                    <div class="bubbel goBubbel">
-
-                        <p>No, i was busy &#128528</p>
-                    </div>
-                </div>
-                <div class="chatBox">
-                    <div class="bubbel  comeBubbel">
-                        <p>Hi,<br>How you are you?</p>
-                    </div>
-                </div>
-                <div class="chatBox">
-                    <div class="bubbel comeBubbel">
-
-                        <p>Is you ignoring me &#128544</p>
-                    </div>
-                </div>
-                <div class="chatBox ">
-                    <div class="bubbel goBubbel">
-
-                        <p>No, i was busy &#128528</p>
-                    </div>
-                </div>
-
-            </div>
-            <div class="typingSection flex align-center content-between">
-                <div id="attachbox" class="attachFile Cpointer">
-                    <div id="attachback" class="attachFileback"></div>
-                    <div id="attachfront" class="attachFilefront" onclick="toogleclicked(this.id)">
-
-                        <span class="material-icons-outlined pad-tb-13">
-                            attach_file
+                    <div class="quickAttach">
+                        <span class="material-icons-outlined">
+                            add_a_photo
                         </span>
-                        <input onchange="showPreview(event)" id="fileUploader" type="file" /hidden>
-
 
                     </div>
-                    <div class="attachFilemenu flex align-center">
-                        <div class="attachFileoption">
-                            <span class="material-icons-outlined size-36" id="imgsend"
-                                onclick="uploadBoxOpner(this.id)">
-                                image
-                            </span>
-                        </div>
-                        <div class="attachFileoption">
-                            <span class="material-icons-outlined size-36 " id="videosend"
-                                onclick="uploadBoxOpner(this.id)">
-                                videocam
-                            </span>
-                        </div>
-                        <div class="attachFileoption">
-                            <span class="material-icons-outlined size-36" id="filesend"
-                                onclick="uploadBoxOpner(this.id)">
-                                description
-                            </span>
-                        </div>
-                        <div class="attachFileoption">
-                            <span class="material-icons-outlined size-36" id="audiosend"
-                                onclick="uploadBoxOpner(this.id)">
-                                music_note
-                            </span>
-                        </div>
-                        <div class="attachFileoption">
-                            <span class="material-icons-outlined size-36">
-                                sentiment_satisfied
-                            </span>
-                        </div>
-
+                    <div class="msgOptions">
+                        <span class="material-icons-outlined">
+                            more_vert
+                        </span>
                     </div>
 
-
                 </div>
+            </div>
+            <div class="feels" >
+                <div class="feelPanale">
+                    <div class="feelNav flex align-center content-between">
+                        <div class="flex align-center">
+                        <span><img  class="profileImg smallprofile" src="/images/Profile/photo-1529665253569-6d01c0eaf7b6.jpg" alt=""></span>
+                        <span class="profileName Bold">Sad Boi &#128528</span></div>
+                        <span class="sideMenuFeelsBtn" id="feelsMenubtn" onclick="toogleclicked(this.id)"></span>
+                        
+                    </div>
+                    <div class="Feelsmenu">
+                        <div class="option Cpointer"><ion-icon name="volume-mute-outline"></ion-icon>Mute</div>
+                        <div class="option color-red"><ion-icon name="flag-outline"></ion-icon>Report</div>
 
-                <div class="msgTyping">
-                    <input class="msgInput" placeholder="Type massage here..." type="text" name="" id="">
+                        </div>
+                    <div class="feelBody">
+                        <div class="feelProgress">
+                            <div class="progressBar"></div>
+                        </div>
+                        <div class="feelChangeButtons flex content-between align-center">
+                        <div class="back_Feel"><ion-icon name="chevron-back-circle-outline"></ion-icon></div>
+                        <div class="fore_Feel"><ion-icon name="chevron-forward-circle-outline"></ion-icon></div>
+                    </div>
+                        <video onclick="feelsVideoPlayer()" id="feelsVideo" src="/Videos/AURORA-runaway.mp4" loop autoplay>Video File not supported in your browser</video>
+                    </div>
+                    <div class="feelReply flex align-center content-center">
+                        <input placeholder="Type your reply...." type="text">
+                        <div class="feelReplyBtn"><span class="unselectable material-icons size-36">
+                            send
+                        </span></div>
+                    </div>
                 </div>
-                <div class="quickAttach">
-                    <span class="material-icons-outlined">
-                        add_a_photo
-                    </span>
-
+                <div class="myfeels flex" id="sad" onclick="Showme(this.id)">
+                    <div class="profileFeels">
+                        <div class="profileImage">
+                            <!-- <span class="material-icons-outlined size-36">
+                                add
+                            </span> -->
+                        </div>
+                    </div>
+                    <div class="feelsName flex flex-column content-center">
+                        <span class="profileName">Your Feels</span>
+                        <span class="feelsInfo">21:58 AM (Delete in 5 Hourse)</span>
+                    </div>
                 </div>
-                <div class="msgOptions">
-                    <span class="material-icons-outlined">
-                        more_vert
-                    </span>
+                <div class="feelsBox flex" id="sad" onclick="Showme(this.id)">
+                    <div class="profile">
+                        <img src="/images/Profile/Millie-Bobby-Brown.webp" alt="">
+                        
+                    </div>
+                    <div class="feelsName flex flex-column content-center">
+                        <span class="profileName">Millie Bobby Brown</span>
+                        <span class="feelsInfo"> 12:55pm</span>
+                    </div>
                 </div>
-
+                <div class="feelsBox flex" id="sad" onclick="Showme(this.id)">
+                    <div class="profile">
+                        <img src="/images/Profile/Twitter-NFT-profile.jpg" alt="">
+                        
+                    </div>
+                    <div class="feelsName flex flex-column content-center">
+                        <span class="profileName">The MOnkey</span>
+                        <span class="feelsInfo">Just now</span>
+                    </div>
+                </div>
+                <div class="feelsBox flex" id="sad" onclick="Showme(this.id)">
+                    <div class="profile">
+                        <img src="/images/Profile/photo-1529665253569-6d01c0eaf7b6.jpg" alt="">
+                        
+                    </div>
+                    <div class="feelsName flex flex-column content-center">
+                        <span class="profileName">SaD boi</span>
+                        <span class="feelsInfo">1 min ago</span>
+                    </div>
+                </div>
+                <div class="feelsBox flex" id="sad" onclick="Showme(this.id)">
+                    <div class="profile">
+                        <img src="/images/Profile/pexels-suliman-sallehi-1704488.jpg" alt="">
+                        
+                    </div>
+                    <div class="feelsName flex flex-column content-center">
+                        <span class="profileName">Suliman Sallehi</span>
+                        <span class="feelsInfo">15-02-2022</span>
+                    </div>
+                </div>
+                <div class="feelsBox flex" id="sad" onclick="Showme(this.id)">
+                    <div class="profile">
+                        <img src="/images/Profile/girl in sunflower.jpg" alt="">
+                        
+                    </div>
+                    <div class="feelsName flex flex-column content-center">
+                        <span class="profileName">Cute Angel</span>
+                        <span class="feelsInfo">15-02-2022</span>
+                    </div>
+                </div>
+            </div>
+            <div class="groups">
+                <img src="/images/twoFlying.jpg" alt="">
             </div>
         </div>
     </div>
-    <!-- <div class="filePreviwePanale flex ">
-        
-        <div class="filePreviwe">
+    <div class="overlay" id="overlay" onclick="toogleclicked(this.id)"></div>
+
+    <div class="filePreviwePanale flex ">
+
+        <div class="filePreviwe flex flex-column ">
             <div class="previweBox">
+
 
             </div>
             <div class="fileInfo">
-                <span><bold>File name</bold></span><br>
-                <span>151 Kb</span>
+                <span>
+                    <bold>File name</bold>
+                </span><br>
+                <span>size : 151 Kb</span>
+            </div>
+            <div class="sendfilebtn">
+                <span class="material-icons size-36">
+                    send
+                </span>
+
             </div>
         </div>
         <div class="selectedFiles">
@@ -340,13 +460,17 @@
         </div>
 
 
-    </div> -->
+    </div>
 
 
 
 
     <script src="/javascript/transitionandeffects.js"></script>
     <script src="/javascript/basics.js"></script>
+    <script src="/javascript/feelsshower.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
 
 </html>

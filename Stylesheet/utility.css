@@ -21,6 +21,15 @@
 .content-between{
     justify-content: space-between;
 }
+
+.content-center{
+    justify-content: center;
+}
+
+.content-evenly{
+    justify-content: space-evenly;
+}
+
 .Bold{
     font-weight: bold;
 }
@@ -38,13 +47,38 @@
     display: none;
 }
 
+.scrollbar-hide{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.size-24{
+    font-size: 24px !important;
+
+}
+
 .size-30{
     font-size: 30px !important;
 }
 
+.Showme{
+    display: block !important;
+}
 
 .size-36{
     
     font-size: 36px !important;
 }
 
+.color-red{
+    color: rgb(255, 0, 0);
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

@@ -1,9 +1,9 @@
 console.log("hello");
 
 let fileuploader = document.getElementById("fileUploader");
-
-
-
+let ChatsPanale = document.getElementsByClassName("chats")[0];
+let FeelsPanale = document.getElementsByClassName("feels")[0];
+let GroupsPanale = document.getElementsByClassName("groups")[0];
 
 function uploadBoxOpner(id) {
     console.log("funstarted");
@@ -40,5 +40,26 @@ function showPreview(event){
       var preview = document.getElementById("hhh");
       preview.src = src;
       preview.style.display = "block";
+    }
+}
+
+
+
+function changePanale(id) {
+    if (id=="feelsButton") {
+        ChatsPanale.classList.remove("Showme");
+        FeelsPanale.classList.add("Showme");
+        GroupsPanale.classList.remove("Showme");
+    }
+    else if (id == "chatButton"){
+        ChatsPanale.classList.add("Showme");
+        FeelsPanale.classList.remove("Showme");
+        GroupsPanale.classList.remove("Showme");
+    }
+    
+    else if (id == "groupsButton"){
+        ChatsPanale.classList.remove("Showme");
+        FeelsPanale.classList.remove("Showme");
+        GroupsPanale.classList.add("Showme");
     }
 }
