@@ -83,6 +83,50 @@ body{
   border-radius: 20px;
   width: 95%;
   margin: 0px auto;
+  
+}
+
+.menuBoxP-horizontal{
+  border-radius: 20px;
+  width: 19vw;
+  /* background-color: yellow; */
+  margin: 0px auto;
+  position: absolute;
+  bottom: 10px;
+  
+}
+
+.menuBox-small{
+  margin: auto 5px;
+  height: 55px;
+  width: 55px;
+  border-bottom: 2px solid var(--elem-back);
+  border-right: 1px solid var(--elem-back);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: ease-in 0.1s;
+  background-color: var(--elem-white-color);
+text-align: center;
+
+}
+
+
+.menuBox-small .material-icons-outlined{
+  margin: auto;
+}
+
+.menuBox-small:hover {
+  background-color: rgb(238, 237, 237);
+  border-radius: 30px;
+  box-shadow: 0 0 20px 4px #56bda0;
+  background: rgb(255,255,255);
+  background: linear-gradient(135deg, rgba(255,255,255,1) 53%, rgba(221,221,221,1) 100%);
+ transform: rotate(-30deg);
+}
+
+
+.menuBox-small:active {
+  background-color: rgb(255, 255, 255);
 }
 
 .menuBox {
@@ -109,18 +153,13 @@ body{
   margin-left: 10px;
 }
 
+
+
 /* ------- */
 /* Mid box started */
 
 
-.midBox::-webkit-scrollbar {
-  width: 5px;
-  background-color: var(--elem-back);
-}
-.midBox::-webkit-scrollbar-thumb {
-  border-radius: 20px;
-  background-color: rgb(213, 255, 255);
-}
+
 
 .midBoxSearchBar{
 height: 50px;
@@ -217,6 +256,7 @@ background-color: var(--elem-white-color);
 .lasttime {
   position: relative;
   right: 20px;
+  font-size: 0.7rem;
 }
 
 /* Right box started */
@@ -362,6 +402,7 @@ background-color: var(--elem-white-color);
   border-radius: 16px;
   box-shadow: 3px 4px 20px 2px rgba(0, 0, 0, 0.356);
   cursor: default;
+  z-index: 4;
 }
 
 .attachFilemenu .attachFileoption{

@@ -1,0 +1,40 @@
+{
+    "ChatContacts": [
+        {
+            "contact": {
+                "name": "Millie Brown",
+                "profile": "/images/Profile/Millie-Bobby-brown.webp",
+                "lastMsg": "You are very  &#128514..",
+                "lastSeen": "Just now",
+                "id": "Con0"
+            }
+        },
+        {
+            "contact": {
+                "name": "The NFT MOnkey",
+                "profile": "/images/Profile/Twitter-NFT-profile.jpg",
+                "lastMsg": "hi there",
+                "lastSeen": "2 mins",
+                "id": "Con1"
+            }
+        },
+        {
+            "contact": {
+                "name": "SaD boi",
+                "profile": "/images/Profile/photo-1529665253569-6d01c0eaf7b6.jpg",
+                "lastMsg": "I'm sad ",
+                "lastSeen": "24 mins",
+                "id": "Con2"
+            }
+        },
+        {
+            "contact": {
+                "name": "Suliman Sallehi",
+                "profile": "/images/Profile/pexels-suliman-sallehi-1704488.jpg",
+                "lastMsg": "Traveling is &#128151 >3",
+                "lastSeen": "2 Hou",
+                "id": "Con3"
+            }
+        }
+    ]
+}

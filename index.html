@@ -58,68 +58,101 @@
                 </div>
             </div>
 
+            <div class="menuBoxP-horizontal">
+                <div id="settings_panale" class="settings unselectable thin-scrollbar">
+                    <div class="settings-box flex align-center">
+                        <span class="material-icons-outlined">
+                            person
+                        </span>
+                        <span class="text">Profile</span>
+                    </div>
+                    <div class="settings-box flex align-center">
+                        <span class="material-icons-outlined">
+                            manage_accounts
+                        </span>
+                        <span class="text">Account</span>
+                    </div>
+                    <div class="settings-box flex align-center">
+                        <span class="material-icons-outlined">
+                            turned_in_not
+                        </span>
+                        <span class="text">Saved messages</span>
+                    </div>
+                    <div class="settings-box flex align-center">
+                        <span class="material-icons-outlined">
+                            memory
+                        </span>
+                        <span class="text">Storage and Data Uses</span>
+                    </div>
+                    <div class="settings-box flex align-center">
+                        <span class="material-icons-outlined">
+                            dark_mode
+                        </span>
+                        <span class="text">Dark Mode</span>
+                    </div>
+                   <div class="settings-box flex align-center">
+                        <span class="material-icons-outlined">
+                            person_add
+                        </span>
+                        <span class="text">Invite a friend</span>
+                    </div>
+                   
+                </div>
+                <div id="settings_btn"  class="menuBox-small unselectable flex align-center" onclick="toogleclicked(this.id) ">
+                    <span class="material-icons-outlined size-30">
+                        settings
+                    </span>
+
+                </div>
+
+            </div>
+
         </div>
-        <div class="midBox">
-            <div class="midBoxSearchBar flex content-between align-center" >
-                
-                    <input id="searchInput" type="text" placeholder="Search in Chats...">
-                
+        <div class="midBox thin-scrollbar">
+            <div class="midBoxSearchBar flex content-between align-center">
+
+                <input id="searchInput" type="search" placeholder="Search in Chats...">
+
                 <div class="searchButtonBox">
                     <ion-icon name="search-outline"></ion-icon>
                 </div>
             </div>
 
-            <div class="midMenuBoxP">
-                <div class="midMenuBox flex align-center content-between">
-                    <span class="flex align-center">
-                        <span>
-                            <img class="profileImg smallprofile" src="/images/Profile/girl in sunflower.jpg" alt="">
-                        </span>
-                        <div class="peoInfo">
-                            <span class="name Bold">Sunflower girl</span>
-                            <span class="lastMsg">so when you.....</span>
-                        </div>
-                    </span>
-                    <span class="lasttime">Tue</span>
-                </div>
-                <div class="midMenuBox flex align-center content-between">
-                    <span class="flex align-center">
-                        <span>
-                            <img class="profileImg smallprofile" src="/images/Profile/girl in sunflower.jpg" alt="">
-                        </span>
-                        <div class="peoInfo">
-                            <span class="name Bold">Sunflower girl</span>
-                            <span class="lastMsg">so when you.....</span>
-                        </div>
-                    </span>
-                    <span class="lasttime">Tue</span>
-                </div>
+            <div class="midMenuBoxP" id="chatContactParant">
+
+
+
             </div>
 
+
+
+
             <div class="midMenuBoxP">
+
                 <div class="midMenuBox flex align-center content-between">
                     <span class="flex align-center">
                         <span>
-                            <img class="profileImg smallprofile" src="/images/Profile/girl in sunflower.jpg" alt="">
+                            <img class="profileImg smallprofile" src="/images/Profile/Twitter-NFT-profile.jpg" alt="">
                         </span>
                         <div class="peoInfo">
-                            <span class="name Bold">Sunflower girl</span>
-                            <span class="lastMsg">so when you.....</span>
+                            <span class="name Bold">Cool Monkey</span>
+                            <span class="lastMsg">Vro.. Banana...</span>
                         </div>
                     </span>
-                    <span class="lasttime">Tue</span>
+                    <span class="lasttime">Mon</span>
                 </div>
                 <div class="midMenuBox flex align-center content-between">
                     <span class="flex align-center">
                         <span>
-                            <img class="profileImg smallprofile" src="/images/Profile/girl in sunflower.jpg" alt="">
+                            <img class="profileImg smallprofile"
+                                src="/images/Profile/pexels-suliman-sallehi-1704488.jpg" alt="">
                         </span>
                         <div class="peoInfo">
-                            <span class="name Bold">Sunflower girl</span>
-                            <span class="lastMsg">so when you.....</span>
+                            <span class="name Bold">The Traveler</span>
+                            <span class="lastMsg">Aaj to m...</span>
                         </div>
                     </span>
-                    <span class="lasttime">Tue</span>
+                    <span class="lasttime">10 min</span>
                 </div>
             </div>
 
@@ -161,7 +194,7 @@
                     </div>
                 </div>
                 <div class="chatList flex flex-column scrollbar-hide">
-                    <div class="chatBox">
+                    <div class="chatBox ">
                         <div class="bubbel  comeBubbel">
                             <p>Hi,<br>How you are you?</p>
                         </div>
@@ -331,35 +364,46 @@
 
                 </div>
             </div>
-            <div class="feels" >
+            <div class="feels">
                 <div class="feelPanale">
                     <div class="feelNav flex align-center content-between">
                         <div class="flex align-center">
-                        <span><img  class="profileImg smallprofile" src="/images/Profile/photo-1529665253569-6d01c0eaf7b6.jpg" alt=""></span>
-                        <span class="profileName Bold">Sad Boi &#128528</span></div>
+                            <span><img class="profileImg smallprofile"
+                                    src="/images/Profile/photo-1529665253569-6d01c0eaf7b6.jpg" alt=""></span>
+                            <span class="profileName Bold">Sad Boi &#128528</span>
+                        </div>
                         <span class="sideMenuFeelsBtn" id="feelsMenubtn" onclick="toogleclicked(this.id)"></span>
-                        
+
                     </div>
                     <div class="Feelsmenu">
-                        <div class="option Cpointer"><ion-icon name="volume-mute-outline"></ion-icon>Mute</div>
-                        <div class="option color-red"><ion-icon name="flag-outline"></ion-icon>Report</div>
-
+                        <div class="option Cpointer">
+                            <ion-icon name="volume-mute-outline"></ion-icon>Mute
                         </div>
+                        <div class="option color-red">
+                            <ion-icon name="flag-outline"></ion-icon>Report
+                        </div>
+
+                    </div>
                     <div class="feelBody">
                         <div class="feelProgress">
                             <div class="progressBar"></div>
                         </div>
                         <div class="feelChangeButtons flex content-between align-center">
-                        <div class="back_Feel"><ion-icon name="chevron-back-circle-outline"></ion-icon></div>
-                        <div class="fore_Feel"><ion-icon name="chevron-forward-circle-outline"></ion-icon></div>
-                    </div>
-                        <video onclick="feelsVideoPlayer()" id="feelsVideo" src="/Videos/AURORA-runaway.mp4" loop autoplay>Video File not supported in your browser</video>
+                            <div class="back_Feel">
+                                <ion-icon name="chevron-back-circle-outline"></ion-icon>
+                            </div>
+                            <div class="fore_Feel">
+                                <ion-icon name="chevron-forward-circle-outline"></ion-icon>
+                            </div>
+                        </div>
+                        <video onclick="feelsVideoPlayer()" id="feelsVideo" src="/Videos/AURORA-runaway.mp4" loop>Video
+                            File not supported in your browser</video>
                     </div>
                     <div class="feelReply flex align-center content-center">
                         <input placeholder="Type your reply...." type="text">
                         <div class="feelReplyBtn"><span class="unselectable material-icons size-36">
-                            send
-                        </span></div>
+                                send
+                            </span></div>
                     </div>
                 </div>
                 <div class="myfeels flex" id="sad" onclick="Showme(this.id)">
@@ -378,7 +422,7 @@
                 <div class="feelsBox flex" id="sad" onclick="Showme(this.id)">
                     <div class="profile">
                         <img src="/images/Profile/Millie-Bobby-Brown.webp" alt="">
-                        
+
                     </div>
                     <div class="feelsName flex flex-column content-center">
                         <span class="profileName">Millie Bobby Brown</span>
@@ -388,17 +432,17 @@
                 <div class="feelsBox flex" id="sad" onclick="Showme(this.id)">
                     <div class="profile">
                         <img src="/images/Profile/Twitter-NFT-profile.jpg" alt="">
-                        
+
                     </div>
                     <div class="feelsName flex flex-column content-center">
-                        <span class="profileName">The MOnkey</span>
+                        <span class="profileName">The NFT MOnkey</span>
                         <span class="feelsInfo">Just now</span>
                     </div>
                 </div>
                 <div class="feelsBox flex" id="sad" onclick="Showme(this.id)">
                     <div class="profile">
                         <img src="/images/Profile/photo-1529665253569-6d01c0eaf7b6.jpg" alt="">
-                        
+
                     </div>
                     <div class="feelsName flex flex-column content-center">
                         <span class="profileName">SaD boi</span>
@@ -408,7 +452,7 @@
                 <div class="feelsBox flex" id="sad" onclick="Showme(this.id)">
                     <div class="profile">
                         <img src="/images/Profile/pexels-suliman-sallehi-1704488.jpg" alt="">
-                        
+
                     </div>
                     <div class="feelsName flex flex-column content-center">
                         <span class="profileName">Suliman Sallehi</span>
@@ -418,7 +462,7 @@
                 <div class="feelsBox flex" id="sad" onclick="Showme(this.id)">
                     <div class="profile">
                         <img src="/images/Profile/girl in sunflower.jpg" alt="">
-                        
+
                     </div>
                     <div class="feelsName flex flex-column content-center">
                         <span class="profileName">Cute Angel</span>
@@ -432,6 +476,7 @@
         </div>
     </div>
     <div class="overlay" id="overlay" onclick="toogleclicked(this.id)"></div>
+    <div class="overlay" id="touchBlockOverlay" onclick="toogleclicked(this.id)"></div>
 
     <div class="filePreviwePanale flex ">
 

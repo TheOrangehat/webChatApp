@@ -52,6 +52,15 @@
     scrollbar-width: none;  /* Firefox */
 }
 
+.thin-scrollbar::-webkit-scrollbar {
+    width: 5px;
+    background-color: var(--elem-back);
+  }
+.thin-scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: rgb(213, 255, 255);
+  }
+
 .size-24{
     font-size: 24px !important;
 

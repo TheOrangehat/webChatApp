@@ -4,7 +4,7 @@
   top: 0px;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.116);
+  background-color: rgba(0, 0, 0, 0.144);
   visibility: hidden;
 }
 
@@ -80,6 +80,7 @@
   visibility: hidden;
   transform: scale(0.8) !important;
   opacity: 0;
+  z-index: 4;
 }
 
 .personOptions .perOptionsList:hover{
@@ -189,7 +190,7 @@ cursor: pointer;
   visibility: hidden;
   transform: scale(0.7) !important;
   opacity: 0;
-  z-index: 5;
+  z-index: 4;
   
 }
 
@@ -228,5 +229,66 @@ border-bottom: none;
  font-size: 0.8rem;
 }
 
+
+/* settings */
+
+.settings{
+  height: 45vh;
+  width: 30vw;
+  background-color: rgba(255, 255, 255, 0.507);
+  /* background: linear-gradient(297deg, rgb(242 255 252 / 25%) 0%, rgb(216 255 244 / 27%) 53%, rgb(215 215 215 / 36%) 100%),url(/noise.svg); */
+
+  backdrop-filter: blur(20px);
+  margin: auto 20px;
+  position: absolute;
+  bottom: 0rem;
+  left: -2.5rem;  
+  border-radius: 12px;
+  padding: 10px 2px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  visibility: hidden;
+  transform: scale(0.8) !important;
+  opacity: 0;
+  z-index: 4;
+
+}
+
+.settings.open{
+  visibility: visible;
+  opacity: 1;
+  transform: scale3d(1, 1, 1) !important;
+  bottom: 4rem;
+  left: 2.5rem;  
+}
+
+.settings-box{
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.137);
+  /* width: 99%; */
+  padding: 2px 10px;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.281);
+
+transition: all 0.2s;
+cursor: pointer;
+}
+
+.settings-box:hover{
+  background-color: rgba(255, 255, 255, 0.589);
+
+  /* background: linear-gradient(297deg, rgb(242 255 252 / 25%) 0%, rgb(216 255 244 / 27%) 53%, rgb(215 215 215 / 36%) 100%),url(/noise.svg); */
+
+}
+
+.settings-box:last-child{
+  border-bottom: none;
+}
+
+.settings-box .text{
+  font-size: 1.2rem;
+  margin: auto auto auto 5px;
+}
 
  

@@ -18,3 +18,19 @@ cont.addEventListener("mouseleave", ()=>{
     console.log("cont");
 
 })
+
+var box = document.getElementsByClassName("box")[0];
+
+
+function getData() {
+    
+    fetch("m.JSON").then((response) =>{
+        return response.json();
+    }).then((data) =>{
+        console.log(data);
+        box.innerHTML = data.name;
+    })
+
+    
+ }
+ getData();
